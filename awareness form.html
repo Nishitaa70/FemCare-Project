@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="awareness form-style.css" />
+    <title>Awareness Form</title>
+  </head>
+  <body>
+    <a href="index.html"><img src="images/WH logo form.png"  class="logo" alt=""  ></a>
+    <div class="container">
+      <form name="submit-to-google-sheet">
+        <h3>Help us in spreading Awareness😊</h3>
+        <input type="text" name="Name" id="name" placeholder="Your Name" required />
+        <input type="email" name="Email" id="email" placeholder="Email ID" required />
+        <input type="text" name="Phone" id="phone" placeholder="Phone Number" required />
+        <textarea
+          name="Message"
+          id="message"
+          rows="4"
+          placeholder="How would you like to help!!"
+        ></textarea>
+        <button type="submit">Participate</button>
+      </form>
+      <span id="msg"></span>
+    </div>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzjCZsH0VINC1V7TxZAdBTsRDfkBwyP5npLTndqyCOVDhI2Or18RxsuBWXEh_Yexsf1oA/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {msg.innerHTML=""
+        setTimeout(function(){msg.innerHTML=""},1000)
+        form.reset()})
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+  </body>
+</html>
