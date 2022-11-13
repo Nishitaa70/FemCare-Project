@@ -25,7 +25,7 @@ JavaScript, often abbreviated as JS, is a programming language that is one of th
 This is the index pages of our website which contains our services for women healthcare, associations with other hospitals nearby, reviews by women and users can also share their experiences via our blogging page. 
 For any other help or query user can contact us by filling our contact form.
 
-![](screencapture-file-C-Users-HP-Desktop-FemCare-form-html-2022-11-13-11_20_25.png)
+![](images/screencapture-file-C-Users-HP-Desktop-FemCare-form-html-2022-11-13-11_20_25.png)
 
 Blogs written by users:
-![](screencapture-file-C-Users-HP-Desktop-FemCare-women-index-html-2022-11-13-11_22_44.png)
+![](images/screencapture-file-C-Users-HP-Desktop-FemCare-women-index-html-2022-11-13-11_22_44.png)
